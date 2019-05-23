@@ -1,12 +1,14 @@
-<%= link_to "Recevoir un email", emails_path, method: "post", remote: true, class:'btn btn-success'%>
-<div class="row">
+<div class="ml-2 mb-3">
+  <%= link_to "Recevoir un email", emails_path, method: "post", remote: true, class:' btn btn-success '%>
+</div>
+<div class="row mt-3">
   <div id="email-objects" class="col-5 ml-auto">
 
 
     <table class="table-striped w-100">
       <thead>
         <tr>
-          <th scope="col"><h1 class="text-center">Email reçu</h1></th>
+          <th scope="col" class="rounded-top bg-secondary"><h1 class="text-center">Email reçu</h1></th>
         </tr>
       </thead>
       <tbody id="email-list">
