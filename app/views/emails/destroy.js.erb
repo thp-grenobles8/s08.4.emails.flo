@@ -1,2 +1,3 @@
-document.querySelector("a[href='/emails/<%= @email.id %>']").remove()
+document.querySelector("a[href='/emails/<%= @email.id %>']").parentNode.remove()
+document.getElementById("email-selected").style.border = "none"
 document.getElementById("email-selected").innerHTML = ""
