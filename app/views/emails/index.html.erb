@@ -1,0 +1,20 @@
+<%= link_to "Recevoir un email", emails_path, method: "post", remote: true, class:'btn btn-success'%>
+<div class="row">
+  <div id="email-objects" class="col-5 ml-auto">
+    <div>
+      <h1 class="text-center">Email reçu</h1>
+    </div>
+    <ol id="email-list">
+      <% @emails.each do |email| %>
+        <%= link_to email_path(email.id), remote: true do %>
+        <li <%if email.read == false%>
+          class="font-weight-bold"
+          <%end%>><%= email.object %></li>
+        <% end %>
+      <% end %>
+    </ol>
+  </div>
+  <div id="email-selected" class="col-5 mr-auto">
+
+  </div>
+</div>

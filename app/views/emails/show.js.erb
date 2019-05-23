@@ -1,0 +1,2 @@
+document.getElementById("email-selected").innerHTML = "<%= j render 'show', email: @email %>"
+document.querySelector("a[href='/emails/<%= @email.id %>']").getElementsByTagName('li')[0].classList.remove('font-weight-bold');
