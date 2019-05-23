@@ -1,4 +1,4 @@
 <h1 class="text-center"><%= email.object %></h1>
 <p> <%= email.body %> </p>
 <%= link_to "Supprimer", email_path(email.id), method: "delete", class:"btn btn-danger ", remote: true%>
-<%= link_to "Marquer comme non lu", email_path(email.id), method: "delete", class:"btn btn-info ", remote: true%>
+<%= link_to "Marquer comme non lu", edit_email_path(email.id), class:"btn btn-info ", id: "read_button", remote: true%>

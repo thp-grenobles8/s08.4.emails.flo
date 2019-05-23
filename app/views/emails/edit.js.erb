@@ -1,0 +1,8 @@
+email_object = document.querySelector("a[href='/emails/<%= @email.id %>']").getElementsByTagName('li')[0]
+email_object.classList.toggle('font-weight-bold');
+email_object.classList.toggle('text-secondary');
+<% if @email.read %>
+document.getElementById('read_button').innerHTML = "Marquer comme non-lu"
+<% else %>
+document.getElementById('read_button').innerHTML = "Marquer comme lu"
+<% end %>

@@ -4,12 +4,16 @@
     <div>
       <h1 class="text-center">Email reçu</h1>
     </div>
-    <ol id="email-list">
-      <% @emails.each do |email| %>
+    <ol class="list-group list-group-striped"id="email-list">
+      <% @emails.each_with_index do |email,index| %>
+
+
         <%= link_to email_path(email.id), remote: true do %>
-        <li <%if email.read == false%>
-          class="font-weight-bold"
-          <%end%>><%= email.object %></li>
+            <li class=" ml-3<%if email.read == false%>
+              font-weight-bold"
+              <%else%>
+              text-secondary"
+              <%end%>><%= email.object %></li>
         <% end %>
       <% end %>
     </ol>

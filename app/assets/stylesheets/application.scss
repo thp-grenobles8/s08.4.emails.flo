@@ -5,3 +5,7 @@
 @import "font-awesome";
 @import "components/*";
 
+
+ol.list-group.list-group-striped li:nth-of-type(odd){background: lightgrey;}
+ol.list-group.list-group-striped li:nth-of-type(even){background: darkgrey;}
+ol.list-group.list-group-hover li:hover{ background: white;}
